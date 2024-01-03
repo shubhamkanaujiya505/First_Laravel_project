@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/home', function () {
     return view('home   ');
 });
-Route::get('/about/{id?}', function (string $id=null) {
+Route::get('/about/{id?}/comment/{comment?}', function (string $id=null, string $comment=null) {
     if($id !=null){
-    return "<h1> post id:".$id."</h1>";
+    return "<h1> post id:".$id."</h1><h1> post comment:".$comment."</h1>";
     }else{
     return "<h1> No id found </h1>";
     }
