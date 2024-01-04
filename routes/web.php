@@ -28,3 +28,8 @@ Route::get('/groups/group', function () {
 Route::get('/contacts/contact', function () {
     return view('contact');
 })->name('contact');
+
+// For redirect url
+// 301 for permanent redirection
+// 302 for temporary redirection
+Route::redirect('/contact','/contacts/contact', 301);
