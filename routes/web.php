@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::prefix('page')->group(function(){
 
 Route::get('/homes/home', function () {
     return view('home');
@@ -28,8 +29,4 @@ Route::get('/groups/group', function () {
 Route::get('/contacts/contact', function () {
     return view('contact');
 })->name('contact');
-
-// For redirect url
-// 301 for permanent redirection
-// 302 for temporary redirection
-Route::redirect('/contact','/contacts/contact', 301);
+});
