@@ -30,3 +30,8 @@ Route::get('/contacts/contact', function () {
     return view('contact');
 })->name('contact');
 });
+
+// for Error show when page is not found
+Route::fallback(function(){
+    return "<h1>Page not found</h1>";
+});
